@@ -96,3 +96,21 @@
   background-position: center; /* Pour centrer l'image */
   z-index: 1; /* Met l'image au-dessus de l'image de fond */
 }
+
+.chest-sprite {
+  background-image : url("/images/spritesheet.png");
+  display          : inline-block;
+  background-repeat: no-repeat;
+}
+
+.chest2-sprite {
+  background-image : url("/images/spritesheetChest.png");
+  display          : inline-block;
+  background-repeat: no-repeat;
+}
+
+.totem-sprite {
+  background-image : url("/images/spritesheetTotem.png");
+  display          : inline-block;
+  background-repeat: no-repeat;
+}

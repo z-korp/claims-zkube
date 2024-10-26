@@ -4,7 +4,7 @@ import * as React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
-const CheckEligibilityDialog: React.FC<{ onClose: (isOpen: boolean) => void }> = ({ onClose }) => {
+const CheckEligibilityDialog: React.FC<{ onClose: (isOpen: boolean) => void, onCheckEligibility: (isEligible: boolean) => void }> = ({ onClose, onCheckEligibility }) => {
     const [username, setUsername] = React.useState("");
     const [isOpen, setIsOpen] = React.useState(true);
 
@@ -30,7 +30,7 @@ const CheckEligibilityDialog: React.FC<{ onClose: (isOpen: boolean) => void }> =
                     <Button variant="outline" className="backdrop-blur-sm"> Check Eligibility </Button>
                 </div>
                 <div className="flex flex-col justify-center w-full space-y-4">
-                    <Button variant="outline" className="backdrop-blur-sm"> Other Options </Button>
+                    {/* <Button onClick={onCheckEligibility}variant="outline" className="backdrop-blur-sm"> Other Options </Button> */}
                 </div>
             </DialogContent>
         </Dialog>

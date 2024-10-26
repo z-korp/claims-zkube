@@ -3,12 +3,14 @@ import Scene from "./Scene"
 import { useState } from "react"
 import SignupDialog from "@/components/dialogs/SignupDialog"
 import SigninDialog from "@/components/dialogs/SigninDialog"
+import AwardsDialog from "@/components/dialogs/AwardsDialog"
 import CheckEligibilityDialog from "@/components/dialogs/CheckEligibilityDialog"
 
 export default function IndexPage() {
   const [isConnected, setIsConnected] = useState(false);
   const [wantSignin, setWantSignin] = useState(false);
   const [wantSignup, setWantSignup] = useState(true);
+  const [isEligible, setIsEligible] = useState(false);
 
   const handleSignup = () => {
     setWantSignup(true);
@@ -43,7 +45,8 @@ export default function IndexPage() {
       <Scene />
       <div className="absolute inset-0 flex items-center justify-center z-10">
         {!isConnected && (wantSignup ? <SignupDialog onSignup={handleConnect} onSwitch={handleSignin} /> : <SigninDialog onSignin={handleConnect} onSwitch={handleSignup} />)}
-        {isConnected && <CheckEligibilityDialog onClose={handleDisconnect} />}
+        {/* {isConnected && <CheckEligibilityDialog onClose={handleDisconnect} />} */}
+        {isConnected && <AwardsDialog onClose={handleDisconnect} />}
       </div>
     </div>
   )

@@ -38,7 +38,7 @@ const SigninDialog: React.FC<{ onSignin: () => void, onSwitch: () => void }> = (
                     </div>
                 </div>
                 <DialogFooter className="flex flex-col items-center">
-                    <Button type="button" onClick={handleSignin} className="mb-2">Sign in with cartridge</Button>
+                    <Button type="button" onClick={onSignin} className="mb-2">Sign in with cartridge</Button>
                 </DialogFooter>
                 <DialogFooter>
                     <p className="text-center">
